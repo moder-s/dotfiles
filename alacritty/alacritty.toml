@@ -1,0 +1,22 @@
+## Alacritty toml V2
+# @StefanModer
+
+#### Themes
+import = [
+  "~/.config/alacritty/themes/catppuccin-frappe.toml"
+  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  # "~/.config/alacritty/themes/catppuccin-latte.toml"
+  # "~/.config/alacritty/themes/catppuccin-macchiato.toml"
+]
+
+#### Window
+[window]
+decorations = "None"
+opacity = 0.87
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+
+[mouse]
+hide_when_typing = true
+
