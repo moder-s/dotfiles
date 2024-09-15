@@ -9,34 +9,52 @@ SUCCESS=0
 FAILURE=1
 
 DOTFILES=$(pwd)
-ALACRITTY_TARGET="alacritty"
 
 CONFIG_DIR="$HOME/.config"
-ALACRITTY_CONFIG_DIR="$CONFIG_DIR/$ALACRITTY_TARGET"
 
 # root guard
-if [[ "$EUID" = 0 ]]
-then
+if [[ "$EUID" = 0 ]]; then
   echo "Please do not run as root" 1>&2
-  exit $FAILURE 
+  exit $FAILURE
 fi
 
 # Configs
-if [[ ! -d "$CONFIG_DIR" ]]
-then 
+if [[ ! -d "$CONFIG_DIR" ]]; then
   mkdir "$CONFIG_DIR"
 fi
 
-if [[ ! -L $ALACRITTY_CONFIG_DIR ]]
-then 
-  if [[ ! -d $ALACRITTY_TARGET ]]
-  then
-    echo "Could not find alacritty configuration" 1>&2
+install_target() {
+  TARGET=${1%/}
+  if [[ $TARGET = "" ]]; then
+    echo -e "\r[✗]\t$TARGET not specified"
+    exit $FAILURE
   fi
-  RESULT=$(ln -s "$DOTFILES/$ALACRITTY_TARGET" "$ALACRITTY_CONFIG_DIR")
-  [[ $RESULT -ne 0 ]] && echo "Could not link alacritty" 1>&2
-else
-  echo "Alacritty config already linked"
-fi
+  echo -en "[ ]\t$TARGET..."
+  sleep 1
+  TARGET_CONFIG_DIR="$CONFIG_DIR/$TARGET"
+  if [[ ! -L $TARGET_CONFIG_DIR ]]; then
+    if [[ ! -d $TARGET ]]; then
+      echo -en "\r[✗]\t$TARGET is missing?"
+    fi
+    if ln -s "$DOTFILES/$TARGET" "$TARGET_CONFIG_DIR" 2>/dev/null; then
+      echo -e "\r[✓]\t$TARGET linked"
+    else
+      echo -e "\r[✗]\t$TARGET could not be linked"
+    fi
+  else
+    echo -e "\r[✓]\t$TARGET config already linked"
+  fi
+}
+
+# install_targets
+for TARGET in */; do
+  if [[ $TARGET = ".*" ]]; then
+    exit $FAILURE
+  fi
+  if [[ ! -d $TARGET ]]; then
+    exit $FAILURE
+  fi
+  install_target "$TARGET"
+done
 
 exit $SUCCESS
