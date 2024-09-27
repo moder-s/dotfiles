@@ -57,4 +57,21 @@ for TARGET in */; do
   install_target "$TARGET"
 done
 
+IFS="."
+for FILE in config.*; do
+  read -a FILE_PARTS <<<"$FILE"
+  LINK_NAME=${FILE_PARTS[1]}
+  CONFIG_FILE="$HOME/.$LINK_NAME"
+  if [[ ! -L $CONFIG_FILE ]]; then
+    if ln -s "$DOTFILES/$FILE" "$CONFIG_FILE" 2>/dev/null; then
+      echo -e "\r[✓]\t$FILE linked"
+    else
+      echo -e "\r[✗]\t$FILE could not be linked"
+    fi
+  else
+    echo -e "\r[✓]\t$FILE already linked"
+  fi
+done
+unset IFS
+
 exit $SUCCESS
