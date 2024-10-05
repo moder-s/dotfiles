@@ -10,6 +10,8 @@ brew "neovim"
 brew "node"
 ### Java
 brew "openjdk@17"
+### Powerlevel 10k
+brew "powerlevel10k"
 ### rg for greping  { nvim }
 brew "ripgrep"
 ### Linter for swift

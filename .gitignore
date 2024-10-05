@@ -3,3 +3,6 @@
 # mac OS
 .DS_Store
 ._*
+
+## brew
+*.lock.json
