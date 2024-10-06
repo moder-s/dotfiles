@@ -57,11 +57,9 @@ for TARGET in */; do
   install_target "$TARGET"
 done
 
-IFS="."
 for FILE in config.*; do
-  read -a FILE_PARTS <<<"$FILE"
-  LINK_NAME=${FILE_PARTS[1]}
-  CONFIG_FILE="$HOME/.$LINK_NAME"
+  TARGET_FILE=${FILE#"config."}
+  CONFIG_FILE="$HOME/.$TARGET_FILE"
   if [[ ! -L $CONFIG_FILE ]]; then
     if ln -s "$DOTFILES/$FILE" "$CONFIG_FILE" 2>/dev/null; then
       echo -e "\r[✓]\t$FILE linked"
