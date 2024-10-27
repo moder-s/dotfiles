@@ -14,6 +14,8 @@ brew "openjdk@17"
 brew "powerlevel10k"
 ### rg for greping  { nvim }
 brew "ripgrep"
+### Styllua for code formating
+brew "stylua"
 ### Linter for swift
 brew "swiftlint"
 ###  wget
