@@ -2,6 +2,8 @@
 
 ### Fuzzy finding files { nvim }
 brew "fd"
+### Lazy git
+brew "lazygit"
 ### Lua packeage manager { nvim }
 brew "luarocks"
 ### Neovim { nvim }

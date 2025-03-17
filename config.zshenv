@@ -11,4 +11,5 @@ CODE_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"
 PATH="$BREW_HOME/bin:$CODE_HOME/bin:$PATH"
 
 ## FLAGS
-CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+LDFLAGS="-L/opt/homebrew/opt/node@20/lib"
+CPPFLAGS="-I/opt/homebrew/opt/node@20/include"
