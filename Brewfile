@@ -22,6 +22,8 @@ brew "stylua"
 brew "swiftlint"
 ###  wget
 brew "wget"
+### zoxide
+brew zoxide
 
 ### Firefox
 cask "firefox" unless system '[[ -e "/Applications/Firefox.app" ]]'
