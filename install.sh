@@ -5,8 +5,8 @@
 ####################
 
 # vars
-SUCCESS=0
-FAILURE=1
+readonly SUCCESS=0
+readonly FAILURE=1
 
 DOTFILES=$(pwd)
 

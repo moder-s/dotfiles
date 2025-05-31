@@ -23,7 +23,7 @@ brew "swiftlint"
 ###  wget
 brew "wget"
 ### zoxide
-brew zoxide
+brew "zoxide"
 
 ### Firefox
 cask "firefox" unless system '[[ -e "/Applications/Firefox.app" ]]'
