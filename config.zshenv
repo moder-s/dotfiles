@@ -3,6 +3,7 @@
 
 # Brew
 BREW_HOME="/opt/homebrew"
+HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/Brewfile"
 
 # VS Code
 CODE_HOME="/Applications/Visual Studio Code.app/Contents/Resources/app"

@@ -6,6 +6,8 @@ brew "fd"
 brew "fzf"
 ### Lazy git
 brew "lazygit"
+### lua language support
+brew "lua"
 ### Lua packeage manager { nvim }
 brew "luarocks"
 ### Neovim { nvim }
