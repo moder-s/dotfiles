@@ -4,6 +4,10 @@
 brew "fd"
 ### Fuzzy finding files { zoxide, nvim }
 brew "fzf"
+### Printing json and viewing json
+brew "jless"
+### Working with json
+brew "jq"
 ### Lazy git
 brew "lazygit"
 ### lua language support
