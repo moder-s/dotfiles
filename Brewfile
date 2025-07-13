@@ -1,5 +1,7 @@
 # Custom brew file for Stefan
 
+### bat (> cat but better)
+brew "bat"
 ### Fuzzy finding files { nvim }
 brew "fd"
 ### Fuzzy finding files { zoxide, nvim }
