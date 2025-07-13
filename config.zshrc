@@ -14,6 +14,7 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 ## >fzf
 eval "$(fzf --zsh)"
+
 # alias
 alias ZZ=exit
 alias ZQ=exit
