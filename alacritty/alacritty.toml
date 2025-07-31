@@ -12,6 +12,7 @@ import = [
 
 #### Window
 [window]
+option_as_alt = "OnlyLeft"
 decorations = "None"
 opacity = 0.87
 
@@ -21,3 +22,12 @@ normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 [mouse]
 hide_when_typing = true
 
+[keyboard]
+bindings = [
+    { key = "Up", mods = "Alt", chars = "\u2191" },
+    { key = "Down", mods = "Alt", chars = "\u2193" },
+    { key = "Up", mods = "Alt | Shift", chars = "\u219F" },
+    { key = "Down", mods = "Alt | Shift", chars = "\u21A1" },
+    { key = "Left", mods = "Alt", chars = "\u2190" },
+    { key = "Right", mods = "Alt", chars = "\u2192" }
+]

@@ -1,9 +1,13 @@
 # Custom brew file for Stefan
+### taps
+tap "leoafarias/fvm"
 
-### bat (> cat but better)
+#bat (> cat but better)
 brew "bat"
 ### Fuzzy finding files { nvim }
 brew "fd"
+### Flutter Development
+brew "fvm"
 ### Fuzzy finding files { zoxide, nvim }
 brew "fzf"
 ### Printing json and viewing json
