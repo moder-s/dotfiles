@@ -22,6 +22,8 @@ normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 [mouse]
 hide_when_typing = true
 
+#### Keybindings
+# Adding (Shift)-Alt-[↑→↓←] for neovim (multicursor)
 [keyboard]
 bindings = [
     { key = "Up", mods = "Alt", chars = "\u2191" },

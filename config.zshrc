@@ -15,6 +15,15 @@ eval "$(zoxide init zsh)"
 ## >fzf
 eval "$(fzf --zsh)"
 
+# Man pages
+export MANPAGER='nvim +Man!'
+
 # alias
 alias ZZ=exit
 alias ZQ=exit
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
