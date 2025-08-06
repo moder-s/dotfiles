@@ -27,3 +27,7 @@ alias ZQ=exit
 [[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+#### PATH (is also set in zshenv for headless)
+PATH="$BREW_HOME/bin:$RUBY_HOME/bin:$CODE_HOME/bin:$PATH"
+### PATH
+

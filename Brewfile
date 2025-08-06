@@ -4,6 +4,8 @@ tap "leoafarias/fvm"
 
 #bat (> cat but better)
 brew "bat"
+### Override system cocoapods
+brew "cocoapods", link: :overwrite
 ### Fuzzy finding files { nvim }
 brew "fd"
 ### Flutter Development
@@ -30,6 +32,8 @@ brew "openjdk@17"
 brew "powerlevel10k"
 ### rg for greping  { nvim }
 brew "ripgrep"
+### Ruby 
+brew "ruby"
 ### Styllua for code formating
 brew "stylua"
 ### Linter for swift
