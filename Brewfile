@@ -43,6 +43,8 @@ brew "wget"
 ### zoxide
 brew "zoxide"
 
+### Android Studio
+cask "android-studio" unless system  '[[ -e "/Applications/Android studio.app" ]]'
 ### Firefox
 cask "firefox" unless system '[[ -e "/Applications/Firefox.app" ]]'
 ### Google Chrome
