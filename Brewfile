@@ -52,3 +52,8 @@ cask "google-chrome" unless system '[[ -e "/Applications/Google Chrome.app" ]]'
 ### vs code
 cask "visual-studio-code" unless system '[[ -e "/Applications/Visual Studio Code.app" ]]'
 
+## Fonts
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-maple-mono-nf"
+

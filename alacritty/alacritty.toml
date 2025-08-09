@@ -18,6 +18,7 @@ opacity = 0.87
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+italic = { family = "Maple Mono NF", style = "Italic"}
 
 [mouse]
 hide_when_typing = true
