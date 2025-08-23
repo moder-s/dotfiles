@@ -4,10 +4,6 @@
 #### Themes
 import = [
   "~/.config/alacritty/themes/sonokai.toml"
-  # "~/.config/alacritty/themes/catppuccin-frappe.toml"
-  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
-  # "~/.config/alacritty/themes/catppuccin-latte.toml"
-  # "~/.config/alacritty/themes/catppuccin-macchiato.toml"
 ]
 
 #### Window
@@ -23,14 +19,3 @@ italic = { family = "Maple Mono NF", style = "Italic"}
 [mouse]
 hide_when_typing = true
 
-#### Keybindings
-# Adding (Shift)-Alt-[↑→↓←] for neovim (multicursor)
-[keyboard]
-bindings = [
-    { key = "Up", mods = "Alt", chars = "\u2191" },
-    { key = "Down", mods = "Alt", chars = "\u2193" },
-    { key = "Up", mods = "Alt | Shift", chars = "\u219F" },
-    { key = "Down", mods = "Alt | Shift", chars = "\u21A1" },
-    { key = "Left", mods = "Alt", chars = "\u2190" },
-    { key = "Right", mods = "Alt", chars = "\u2192" }
-]
